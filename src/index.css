@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav{
+  p0dding: 0 1rem;
+}
+
+.content{
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.goods{
+  display: grid;
+  grid-template-columns: repeat(auto-fillt, minmax(250px, 1fr));
+  gap: 1rem;
+}
