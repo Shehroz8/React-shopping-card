@@ -1,14 +1,16 @@
-import './App.css';
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Shop from "./components/Shop";
+import {Header} from "./components/Header";
+import {Footer} from "./components/Footer";
+import {Shop} from "./components/Shop";
+// import {ToastContainer} from "react-toastify";
+
 function App() {
   return (
-    <>
-      <Header />
-        <Shop />
-      <Footer />
-    </>
+    <div>
+      {/* <ToastContainer/> */}
+      <Header/>
+      <Shop/>
+      <Footer/>
+    </div>
   );
 }
 

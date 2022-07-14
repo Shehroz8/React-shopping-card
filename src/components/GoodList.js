@@ -1,14 +1,19 @@
-import GoodItem from "./GoodItem";
-export default function GoodList(props){
-    const {goods = []} = props;
+import { GoodItem } from "./GoodItem";
 
-    if(goods.length){
-        return <h3>No goods</h3>
-    }
+function GoodList(props) {
+  const { goods = [], addToBasket } = props;
 
-    return(
-        <div className="goods">{goods.map(item =>(
-            <GoodItem key={item.id} {...item}/>
-        ))}</div>
-    )
+  if (!goods.length) {
+    return <h3>Nothing here</h3>;
+  }
+
+  return (
+    <div className="goods">
+      {goods.map((item) => (
+        <GoodItem key={item.id} {...item} addToBasket={addToBasket} />
+      ))}
+    </div>
+  );
 }
+
+export { GoodList };
